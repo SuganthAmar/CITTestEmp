@@ -1,0 +1,47 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  /* text-align: center; */
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  
+}
+.form input{
+  font:20px;
+  width: 300px;
+}
+.formbutton{
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+.employee-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.employee-table th, .employee-table td {
+  border: 1px solid #65d3db;
+  text-align: left;
+  padding: 8px;
+}
+
+.employee-table th {
+  background-color: #50d5e3;
+}
+
+.employee-table button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.employee-table i {
+  color: red;
+}
+
+
