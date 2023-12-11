@@ -3,13 +3,15 @@ const app = express();
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const cors = require('cors');
+const urlDB=`mysql://root:-656646a2E3aEcahecHG442-3c314DdB@roundhouse.proxy.rlwy.net:18505/railway`
 
-const db = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: 'password',
-  database: 'employeedetails',
-});
+// const db = mysql.createPool({
+//   host: 'localhost',
+//   user: 'root',
+//   password: 'password',
+//   database: 'employeedetails',
+// });
+const db=mysql.createConnection(urlDB);
 
 app.use(cors());
 app.use(express.json());
