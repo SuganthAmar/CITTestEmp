@@ -11,9 +11,9 @@ function App() {
   useEffect(() => {
     fetchEmployeeList();
   }, []);
-
+  
   const fetchEmployeeList = () => {
-    Axios.get('http://localhost:3001/api/get').then((response) => {
+    Axios.get('http://cittestemp-production.up.railway.app/api/get').then((response) => {
       // Calculate experience and add it to the result
       const employeesWithExperience = response.data.map((employee) => {
         const currentDate = new Date();
@@ -30,7 +30,7 @@ function App() {
     });
   };
   const submitReview = () => {
-    Axios.post('http://localhost:3001/api/insert', {
+    Axios.post('http://cittestemp-production.up.railway.app/api/insert', {
       emp_name: empname,
       emp_job: empjob,
       dob: dob,
@@ -47,7 +47,7 @@ function App() {
       });
   };
   const deleteEmp = (emp) => {
-    Axios.delete(`http://localhost:3001/api/delete/${emp}`)
+    Axios.delete(`http://cittestemp-production.up.railway.app/api/delete/${emp}`)
       .then(() => {
         fetchEmployeeList();
       });
